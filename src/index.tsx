@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './Componentes/App';
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter } from 'react-router-dom';
+import TodosProvider from './Componentes/context/TodosProvider';
 
 ReactDOM.render(
   <React.StrictMode>
+    <BrowserRouter>
+    <TodosProvider> </TodosProvider>
     <App />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
